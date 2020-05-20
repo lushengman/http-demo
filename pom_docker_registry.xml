@@ -64,9 +64,9 @@
                         <imageTag>${project.version}</imageTag>
                     </imageTags>
 
-                    <registryUrl>192.168.66.153:5000</registryUrl>
+                    <registryUrl>192.168.66.149:5000</registryUrl>
                     <pushImage>true</pushImage>
-                    <imageName>192.168.66.153:5000/${project.artifactId}</imageName>
+                    <imageName>192.168.66.149:5000/${project.artifactId}}</imageName>
                     <!--构建镜像的配置信息-->
                     <resources>
                         <resource>
@@ -79,5 +79,27 @@
             </plugin>
         </plugins>
     </build>
-
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
