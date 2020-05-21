@@ -47,6 +47,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <layout>ZIP</layout>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <!--新增的docker maven插件-->
             <plugin>
